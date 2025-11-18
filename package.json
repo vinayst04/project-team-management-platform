@@ -1,0 +1,23 @@
+{
+  "name": "cloudflex-assignment",
+  "version": "1.0.0",
+  "description": "CloudFlex Project Management Portal - Full Stack Application",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run start:dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "setup": "npm run install:all && npm run create-env",
+    "create-env": "node -e \"const fs = require('fs'); const env = fs.readFileSync('.env', 'utf8'); const frontendEnv = env.split('\\n').filter(line => line.includes('NEXT_PUBLIC')).join('\\n'); fs.writeFileSync('frontend/.env.local', frontendEnv + '\\n');\"",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "keywords": ["nestjs", "nextjs", "react", "postgresql", "jwt", "rbac"],
+  "author": "",
+  "license": "ISC"
+}
+
