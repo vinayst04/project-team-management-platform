@@ -86,10 +86,10 @@ next-env.d.ts
 # Optional REPL history
 .node_repl_history
 
-# Output of 'npm pack'
+# Output of npm pack
 *.tgz
 
-# dotenv environment variable files
+# dotenv ev files
 .env
 .env.development.local
 .env.test.local

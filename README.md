@@ -44,7 +44,7 @@ This starts:
 - Backend: `http://localhost:4001`
 - Frontend: `http://localhost:3000`
 
-## 📋 Features
+## Features
 
 ### User Management
 - Register with email/password (passwords hashed with bcrypt)
@@ -60,7 +60,7 @@ This starts:
 - Assign users to projects with roles: owner, developer, viewer
 - Only owners/admins can manage project assignments
 
-## 🗄️ Database Schema
+## Database Schema
 
 **Clients**: Company/organization records
 - `id`, `name`, `created_at`, `updated_at`
